@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Pintar Nusantara</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — Sticky Navigation Bar
+  ============================================================ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">
+          Kuis Pintar <span class="logo-accent">Nusantara</span>
+        </span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav" id="nav">
+        <a href="#hero"     class="nav-link active">Beranda</a>
+        <a href="#subjects" class="nav-link" data-subject="matematika">Matematika</a>
+        <a href="#subjects" class="nav-link" data-subject="ipa">IPA</a>
+        <a href="#subjects" class="nav-link" data-subject="bahasa">Bahasa Indonesia</a>
+        <a href="#about"    class="nav-link">Tentang</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-btn" id="darkModeBtn" title="Toggle Dark Mode">
+          <i class="fas fa-moon" id="darkModeIcon"></i>
+        </button>
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION — Landing / Welcome Area
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Animated Background Shapes -->
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container hero-content">
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <div class="hero-badge">🏆 Platform Belajar #1 untuk SD &amp; SMP</div>
+        <h1 class="hero-title">
+          Kuis Interaktif<br />
+          <span class="highlight">Pelajaran SD &amp; SMP</span>
+        </h1>
+        <p class="hero-desc">
+          Latih kemampuanmu melalui berbagai kuis menarik untuk meningkatkan
+          pemahaman materi dan persiapan ujian. Belajar lebih mudah, cerdas,
+          dan menyenangkan!
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="startBtn">
+            <i class="fas fa-play"></i> Mulai Belajar
+          </button>
+          <button class="btn btn-secondary" id="leaderboardBtn">
+            <i class="fas fa-trophy"></i> Papan Skor
+          </button>
+        </div>
+        <!-- Quick Stats -->
+        <div class="hero-stats">
+          <div class="stat"><strong>30+</strong><span>Soal Latihan</span></div>
+          <div class="stat"><strong>3</strong><span>Mata Pelajaran</span></div>
+          <div class="stat"><strong>100%</strong><span>Gratis</span></div>
+        </div>
+      </div>
+
+      <!-- Hero Illustration / Floating Cards -->
+      <div class="hero-illustration">
+        <div class="hero-card-float card-1">📐 Matematika</div>
+        <div class="hero-card-float card-2">🔬 IPA</div>
+        <div class="hero-card-float card-3">📖 Bahasa Indonesia</div>
+        <div class="hero-main-visual">
+          <div class="visual-circle">
+            <span class="visual-emoji">🎓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SUBJECTS SECTION — Pilihan Mata Pelajaran
+  ============================================================ -->
+  <section class="subjects" id="subjects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pilih Pelajaran</span>
+        <h2 class="section-title">Pilih Mata Pelajaran</h2>
+        <p class="section-desc">Klik kartu mata pelajaran untuk memulai kuis interaktif</p>
+      </div>
+
+      <div class="subjects-grid">
+
+        <!-- Card: Matematika -->
+        <div class="subject-card" data-subject="matematika" id="card-matematika">
+          <div class="card-icon">🧮</div>
+          <h3 class="card-title">Matematika</h3>
+          <p class="card-desc">
+            Latihan operasi hitung, pecahan, geometri, dan aljabar dasar.
+          </p>
+          <div class="card-meta">
+            <span><i class="fas fa-question-circle"></i> 10 Soal</span>
+            <span><i class="fas fa-clock"></i> 15 Menit</span>
+          </div>
+          <button class="btn btn-card">
+            Mulai Kuis <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Card: IPA (Featured) -->
+        <div class="subject-card featured" data-subject="ipa" id="card-ipa">
+          <div class="card-badge-featured">Populer</div>
+          <div class="card-icon">🔬</div>
+          <h3 class="card-title">IPA</h3>
+          <p class="card-desc">
+            Pelajari makhluk hidup, energi, gaya, dan fenomena alam.
+          </p>
+          <div class="card-meta">
+            <span><i class="fas fa-question-circle"></i> 10 Soal</span>
+            <span><i class="fas fa-clock"></i> 15 Menit</span>
+          </div>
+          <button class="btn btn-card">
+            Mulai Kuis <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Card: Bahasa Indonesia -->
+        <div class="subject-card" data-subject="bahasa" id="card-bahasa">
+          <div class="card-icon">📖</div>
+          <h3 class="card-title">Bahasa Indonesia</h3>
+          <p class="card-desc">
+            Latihan tata bahasa, membaca, menulis, dan pemahaman teks.
+          </p>
+          <div class="card-meta">
+            <span><i class="fas fa-question-circle"></i> 10 Soal</span>
+            <span><i class="fas fa-clock"></i> 15 Menit</span>
+          </div>
+          <button class="btn btn-card">
+            Mulai Kuis <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       QUIZ SECTION — Area Kuis Interaktif
+  ============================================================ -->
+  <section class="quiz-section" id="quizSection">
+    <div class="container">
+
+      <!-- ── Input Nama Siswa (ditampilkan sebelum kuis dimulai) ── -->
+      <div class="name-modal" id="nameModal" style="display:none;">
+        <div class="modal-card">
+          <div class="modal-icon">✏️</div>
+          <h2>Siap Memulai Kuis?</h2>
+          <p>Masukkan namamu sebelum mulai!</p>
+          <div class="input-group">
+            <label for="studentName">Nama Siswa</label>
+            <input
+              type="text"
+              id="studentName"
+              placeholder="Contoh: Budi Santoso"
+              maxlength="30"
+            />
+          </div>
+          <p class="subject-selected" id="subjectSelected">
+            Mata Pelajaran: <strong id="selectedSubjectName">-</strong>
+          </p>
+          <button class="btn btn-primary btn-full" id="startQuizBtn">
+            <i class="fas fa-play"></i> Mulai Kuis Sekarang
+          </button>
+          <button class="btn btn-ghost btn-full" id="cancelQuizBtn">Batal</button>
+        </div>
+      </div>
+
+      <!-- ── Area Soal Kuis ── -->
+      <div class="quiz-area" id="quizArea" style="display:none;">
+
+        <!-- Header Kuis: Badge + Timer -->
+        <div class="quiz-header">
+          <div class="quiz-info">
+            <span class="quiz-subject-badge" id="quizSubjectBadge">Matematika</span>
+            <span class="quiz-student" id="quizStudentName">👤 Nama Siswa</span>
+          </div>
+          <div class="quiz-timer" id="quizTimer">
+            <i class="fas fa-clock"></i>
+            <span id="timerDisplay">15:00</span>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="quiz-progress">
+          <div class="progress-info">
+            <span id="questionCounter">Soal 1 / 10</span>
+            <span id="scoreDisplay">Skor: 0</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar" style="width:10%"></div>
+          </div>
+        </div>
+
+        <!-- Kartu Soal -->
+        <div class="question-card" id="questionCard">
+          <div class="question-number" id="questionNumber">SOAL 01</div>
+          <p class="question-text" id="questionText">
+            Pertanyaan akan muncul di sini.
+          </p>
+          <!-- Pilihan Jawaban (diisi JS) -->
+          <div class="options-grid" id="optionsGrid"></div>
+        </div>
+
+        <!-- Navigasi Soal -->
+        <div class="quiz-navigation">
+          <button class="btn btn-nav" id="prevBtn" disabled>
+            <i class="fas fa-chevron-left"></i> Sebelumnya
+          </button>
+          <!-- Dot Indikator Soal -->
+          <div class="quiz-dots" id="quizDots"></div>
+          <button class="btn btn-nav" id="nextBtn">
+            Selanjutnya <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Tombol Submit -->
+        <div class="submit-area">
+          <button class="btn btn-submit" id="submitQuizBtn">
+            <i class="fas fa-flag-checkered"></i> Selesai &amp; Lihat Nilai
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESULT SECTION — Halaman Hasil Kuis
+  ============================================================ -->
+  <section class="result-section" id="resultSection" style="display:none;">
+    <div class="container">
+      <div class="result-card" id="resultCard">
+
+        <!-- Header Hasil -->
+        <div class="result-header">
+          <div class="result-emoji" id="resultEmoji">🏆</div>
+          <h2 class="result-title">Hasil Kuis Selesai!</h2>
+          <p class="result-student" id="resultStudentName">Nama Siswa</p>
+          <span class="result-subject-badge" id="resultSubjectBadge">Matematika</span>
+        </div>
+
+        <!-- Lingkaran Skor Animasi -->
+        <div class="result-score-circle">
+          <svg viewBox="0 0 120 120" class="score-ring">
+            <circle cx="60" cy="60" r="54" class="ring-bg" />
+            <circle cx="60" cy="60" r="54" class="ring-progress" id="ringProgress" />
+          </svg>
+          <div class="score-text">
+            <span class="score-number" id="finalScore">0</span>
+            <span class="score-label">/ 100</span>
+          </div>
+        </div>
+
+        <!-- Kategori Nilai -->
+        <div class="result-category" id="resultCategory">Sangat Baik</div>
+
+        <!-- Statistik Benar / Salah / Persentase -->
+        <div class="result-stats">
+          <div class="stat-item correct">
+            <i class="fas fa-check-circle"></i>
+            <span class="stat-val" id="correctCount">0</span>
+            <span class="stat-lbl">Benar</span>
+          </div>
+          <div class="stat-item wrong">
+            <i class="fas fa-times-circle"></i>
+            <span class="stat-val" id="wrongCount">0</span>
+            <span class="stat-lbl">Salah</span>
+          </div>
+          <div class="stat-item percent">
+            <i class="fas fa-percent"></i>
+            <span class="stat-val" id="percentCount">0%</span>
+            <span class="stat-lbl">Persentase</span>
+          </div>
+        </div>
+
+        <!-- Tombol Aksi Hasil -->
+        <div class="result-actions">
+          <button class="btn btn-primary"     id="retryBtn">
+            <i class="fas fa-redo"></i> Coba Lagi
+          </button>
+          <button class="btn btn-secondary"   id="backHomeBtn">
+            <i class="fas fa-home"></i> Beranda
+          </button>
+          <button class="btn btn-certificate" id="certificateBtn" style="display:none;">
+            <i class="fas fa-certificate"></i> Unduh Sertifikat
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LEADERBOARD SECTION — Papan Skor & Riwayat Nilai
+  ============================================================ -->
+  <section class="leaderboard-section" id="leaderboardSection" style="display:none;">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-badge">🏆 Papan Skor</span>
+        <h2 class="section-title">Leaderboard &amp; Riwayat Nilai</h2>
+        <p class="section-desc">Lihat skor terbaik dari semua peserta kuis</p>
+      </div>
+
+      <!-- Tab Filter -->
+      <div class="leaderboard-tabs">
+        <button class="tab-btn active" data-tab="all">Semua</button>
+        <button class="tab-btn" data-tab="matematika">Matematika</button>
+        <button class="tab-btn" data-tab="ipa">IPA</button>
+        <button class="tab-btn" data-tab="bahasa">Bahasa Indonesia</button>
+      </div>
+
+      <!-- Tabel Leaderboard -->
+      <div class="leaderboard-table-wrap">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama</th>
+              <th>Mata Pelajaran</th>
+              <th>Skor</th>
+              <th>Kategori</th>
+              <th>Tanggal</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <tr>
+              <td colspan="6" class="empty-row">
+                Belum ada data. Mulai kuis untuk mengisi papan skor!
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tombol Aksi Leaderboard -->
+      <div class="leaderboard-actions">
+        <button class="btn btn-primary" id="backFromLeaderboard">
+          <i class="fas fa-arrow-left"></i> Kembali
+        </button>
+        <button class="btn btn-danger-outline" id="clearLeaderboard">
+          <i class="fas fa-trash"></i> Hapus Riwayat
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION — Tentang Website
+  ============================================================ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Teks Tentang -->
+        <div class="about-text">
+          <span class="section-badge">Tentang Kami</span>
+          <h2 class="section-title">
+            Belajar Lebih Mudah &amp; Menyenangkan
+          </h2>
+          <p>
+            <strong>Kuis Pintar Nusantara</strong> adalah platform kuis interaktif
+            yang dirancang khusus untuk siswa SD dan SMP di Indonesia. Kami percaya
+            bahwa belajar bisa menjadi pengalaman yang menyenangkan dan tidak membosankan.
+          </p>
+          <p style="margin-top:12px;">
+            Dengan sistem penilaian otomatis, timer, leaderboard, dan sertifikat digital,
+            siswa dapat terus termotivasi untuk belajar dan meningkatkan kemampuan mereka.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i> Gratis selamanya
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i> Tanpa perlu login
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i> Berjalan di semua perangkat
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i> Sertifikat digital otomatis
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu Statistik -->
+        <div class="about-cards">
+          <div class="about-stat-card">
+            <span>30+</span><p>Total Soal</p>
+          </div>
+          <div class="about-stat-card accent">
+            <span>3</span><p>Mata Pelajaran</p>
+          </div>
+          <div class="about-stat-card">
+            <span>100%</span><p>Gratis</p>
+          </div>
+          <div class="about-stat-card accent">
+            <span>🏆</span><p>Sertifikat Digital</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🎓</span>
+        <span class="footer-logo-text">Kuis Pintar Nusantara</span>
+      </div>
+      <p class="footer-tagline">
+        Belajar lebih mudah, cerdas, dan menyenangkan.
+      </p>
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <a href="#" class="social-btn" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-btn" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-btn" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="social-btn" title="Twitter/X">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Kuis Pintar Nusantara. Semua hak dilindungi.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       TOAST NOTIFICATION — Pesan Feedback Jawaban
+  ============================================================ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ============================================================
+       CERTIFICATE MODAL — Sertifikat Digital
+  ============================================================ -->
+  <div class="cert-overlay" id="certOverlay" style="display:none;">
+    <div class="cert-modal">
+      <canvas id="certCanvas" width="900" height="620"></canvas>
+      <div class="cert-actions">
+        <button class="btn btn-primary" id="downloadCertBtn">
+          <i class="fas fa-download"></i> Unduh Sertifikat PNG
+        </button>
+        <button class="btn btn-ghost" id="closeCertBtn">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
